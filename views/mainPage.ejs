@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <title><%= title %></title>
+  </head>
+  <body>
+    <%- include(`./partials/header`) %>
+    <div class="container-main">
+      <div class="main__first-block left-text">
+        <h4 class="first-block__header"></h4>
+        <p class="first-block__desc"></p>
+      </div>
+      <div class="main__first-block right-img"></div>
+      <div class="main__second-block left-img"></div>
+      <div class="main__second-block right-text">
+        <h4 class="second-block__header"></h4>
+        <p class="second-block__desc"></p>
+      </div>
+    </div>
+    <%- include(`./partials/footer`) %>
+  </body>
+</html>

@@ -1,10 +1,12 @@
-const User = require("../models/user");
+const User = require("../models/users");
 
-module.exports = function (req, res, next) {
-  if (!req.session.userEmail) return next();
-  User.findByEmail(req.session.userEmail, (err, userData) => {
+module.exports = (req, res, next) => {
+  if (!req.session.name) {
+    return next();
+  }
+  User.findByEmail(req.session.email, (err, userDatas) => {
     if (err) return next(err);
-    if (userData) req.user = res.locals.user = userData;
+    if (userDatas) req.user = res.locals.user = userDatas;
     next();
   });
 };
